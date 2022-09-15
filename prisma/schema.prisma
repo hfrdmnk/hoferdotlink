@@ -17,5 +17,5 @@ model ShortLink {
   id        Int @id @default(autoincrement())
   createdAt DateTime @default(now())
 
-  url       String? @db.VarChar(255)
+  url       String? @db.VarChar(2000)
 }
