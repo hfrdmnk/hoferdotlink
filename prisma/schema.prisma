@@ -9,3 +9,10 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model ShortLink {
+  id        Int @id @default(autoIncrement())
+  createdAt DateTime @default(now())
+
+  url       String @db.VarChar(1000)
+}
